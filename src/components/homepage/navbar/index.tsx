@@ -5,9 +5,9 @@ import { animate } from "framer-motion";
 const navLinks = [
   { label: "Home", id: "home" },
   { label: "About", id: "about" },
-  { label: "Contact", id: "contact" },
-  { label: "Blog", href: "/blog" },
-  { label: "Docs", href: "/docs" },
+  { label: "Hotels", id: "contact" },
+  { label: "Process", id: "process" },
+  { label: "Contact", id: "footer" },
 ];
 
 export const Navbar = () => {
@@ -34,7 +34,7 @@ export const Navbar = () => {
   }, []);
 
   // 🌀 Smooth scroll using Framer Motion
-  const smoothScroll = (e: React.MouseEvent, id?: string, href?: string) => {
+  const smoothScroll = (e: React.MouseEvent, id?: string) => {
     if (!id) return; // Skip external links
     e.preventDefault();
 
@@ -62,14 +62,14 @@ export const Navbar = () => {
 
         {/* 🔸 Nav Links (centered) */}
         <ul className="font-manrope flex items-center gap-10 bg-neutral-900/60 rounded-2xl px-20 py-8 border border-neutral-700">
-          {navLinks.map(({ label, id, href }) => {
-            const linkTarget = id ? `#${id}` : href ?? "#";
+          {navLinks.map(({ label, id }) => {
+            const linkTarget = `#${id}`;
             const isActive = active === `#${id}`;
             return (
               <li key={label}>
                 <a
                   href={linkTarget}
-                  onClick={(e) => smoothScroll(e, id, href)}
+                  onClick={(e) => smoothScroll(e, id)}
                   className={`px-10 py-4 rounded-xl text-sm uppercase text-white transition-colors duration-200 ${
                     isActive ? "bg-slate-800" : "hover:bg-slate-700"
                   }`}

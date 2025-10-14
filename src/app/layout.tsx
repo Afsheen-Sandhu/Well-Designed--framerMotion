@@ -2,8 +2,7 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono } from "next/font/google";
 import localFont from "next/font/local";
 import "./globals.css";
-import { MouseProvider } from "./utils/MouseContext";
-
+import { MouseProvider } from "../utils/MouseContext";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -49,9 +48,7 @@ export default function RootLayout({
       <body
         className={`h-screen ${geistSans.variable} ${geistMono.variable} ${dahlia.variable} ${manrope.variable} ${quattrocento.variable} antialiased`}
       >
-        <MouseProvider>
-          {children}
-        </MouseProvider>
+        <MouseProvider>{children}</MouseProvider>
       </body>
     </html>
   );

@@ -1,4 +1,6 @@
-- [x] Change SlideTabs from <ul> to <div> and adjust classes
-- [x] Change Tab from <li> to <a>, add href="#", update hover bg to slate-700
-- [x] Add mouse events to Tab for cursor animation
-- [x] Remove mix-blend-difference and adjust hover bg for visibility
+# TODO for Adding Move to Top Icon
+
+- [x] Import ArrowUp icon from lucide-react in src/components/last/index.tsx
+- [x] Add ArrowUp icon element in the JSX, positioned absolutely at bottom right
+- [x] Implement onClick handler to scroll to top with smooth behavior
+- [x] Style the icon with cursor pointer and hover effects

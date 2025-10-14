@@ -18,8 +18,8 @@ export const About = () => {
                
     ]
   return (
-    <div className='h-screen w-full py-30 bg-black'>
-        <div className=' flex items-center justify-center pb-10'>
+    <div className=' w-full h-screen pt-30 bg-black'>
+        <div className=' flex items-center justify-center pb-4'>
             <h1 className='font-quattrocento  text-white text-4xl font'>Hotels Well Designed</h1>
         </div>
         <div className='grid grid-cols-6 gap-4 px-30 py-20'>
@@ -32,7 +32,7 @@ export const About = () => {
                 />
             ))}
         </div>
-            
+
     </div>
   )
 }
