@@ -3,10 +3,10 @@ import { Homepage } from "@/components/homepage";
 import { Hero } from "@/components/homepage/hero";
 import { MouseFollower } from "@/components/mouse-follower";
 import { About } from "@/components/about";
-import { Contact } from "@/components/hotel";
 import { Process } from "@/components/process";
 import { Footer } from "@/components/footer";
 import { Last } from "@/components/last";
+import ImageCards from "@/components/hotel";
 
 export default function Home() {
   return (
@@ -20,7 +20,7 @@ export default function Home() {
         <About />
       </section>
       <section id="contact">
-        <Contact />
+        <ImageCards />
       </section>
       <section id="process">
         <Process />

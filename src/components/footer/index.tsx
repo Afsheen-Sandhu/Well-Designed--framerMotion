@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import { Button } from "../ui/button";
 
 export const Footer = () => {
   const [formData, setFormData] = useState({
@@ -136,13 +137,13 @@ export const Footer = () => {
                   required
                 />
               </div>
-              <button
+              <Button
                 type="submit"
-                className="w-full font-manrope text-xl font-bold mt-8 py-4 bg-white text-black rounded-xl  hover:bg-slate-600 hover:text-white transform transition-all duration-200 shadow-lg"
-                style={{ fontFamily: "Manrope, sans-serif" }}
+                className="w-full bg-white text-black font-manrope font-semibold py-3 space-x-2 rounded-lg hover:bg-gray-100 transition-colors"
               >
-                Send Enquiry
-              </button>
+                Send Message
+              </Button>
+               
             </form>
           </div>
         </div>

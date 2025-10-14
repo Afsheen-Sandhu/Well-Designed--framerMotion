@@ -71,7 +71,10 @@ export const Process = () => {
   };
 
   return (
-    <section id="process" className="w-full min-h-screen bg-black text-white px-10 py-20 font-quattrocento">
+    <section
+      id="process"
+      className="w-full min-h-screen bg-black text-white px-10 py-20 font-quattrocento"
+    >
       <div className="text-center mb-16">
         <h1 className="text-5xl font-semibold tracking-wide">The Process</h1>
         <p className="text-gray-400 mt-3">
@@ -124,7 +127,9 @@ export const Process = () => {
                     className="overflow-hidden"
                   >
                     <div
-                      ref={(el) => (refs.current[index] = el)}
+                      ref={(el) => {
+                        refs.current[index] = el;
+                      }}
                       className="mt-4"
                     >
                       <p className="text-gray-300 leading-relaxed">

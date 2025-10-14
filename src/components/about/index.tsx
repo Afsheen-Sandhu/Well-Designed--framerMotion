@@ -18,7 +18,7 @@ export const About = () => {
                
     ]
   return (
-    <div className=' w-full h-screen pt-30 bg-black'>
+    <div className=' w-full h-screen py-30 bg-black'>
         <div className=' flex items-center justify-center pb-4'>
             <h1 className='font-quattrocento  text-white text-4xl font'>Hotels Well Designed</h1>
         </div>
@@ -32,7 +32,10 @@ export const About = () => {
                 />
             ))}
         </div>
-
+            <div className=' font-manropetext-white text-center px-20 py-10 space-y-8'>
+                <h2 className='text-5xl'>About</h2>
+                <p className='text-4xl font-quattrocento px-60'>Welcome to iframe hospitality, your premier destination for exceptional branding and web design tailored specifically for hotels and villas in the captivating landscapes of Greece.</p>
+            </div>
     </div>
   )
 }
