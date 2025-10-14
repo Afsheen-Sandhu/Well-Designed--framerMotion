@@ -4,6 +4,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import { MouseProvider } from "./utils/MouseContext";
 
+
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -46,7 +47,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${geistMono.variable} ${dahlia.variable} ${manrope.variable} ${quattrocento.variable} antialiased`}
+        className={`h-screen ${geistSans.variable} ${geistMono.variable} ${dahlia.variable} ${manrope.variable} ${quattrocento.variable} antialiased`}
       >
         <MouseProvider>
           {children}

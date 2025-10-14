@@ -9,40 +9,24 @@ export const MouseFollower = () => {
 
   useEffect(() => {
     const handleMouseOver = (e: MouseEvent) => {
-      const target = e.target as HTMLElement;
-      
-      // Check if hovering over navbar logo or heading
-      const isLogo = target.tagName === 'IMG' && target.src?.includes('Logo.svg');
-      const isHeading = target.tagName === 'H1' || target.classList.contains('font-dahlia');
-      const isNavbarTab = target.closest('li') && target.closest('ul');
-      
-      // More specific check for navbar tabs
-      const isNavbarLi = target.tagName === 'LI' && target.classList.contains('cursor-pointer');
-      
-      if (isLogo || isHeading || isNavbarTab || isNavbarLi) {
+      // Scale up on navbar or hero hover
+      if (
+        (e.target as HTMLElement).closest('.navbar-tab') ||
+        (e.target as HTMLElement).closest('.hero-hover-area')
+      ) {
         setIsHovered(true);
       }
     };
-
     const handleMouseOut = (e: MouseEvent) => {
-      const target = e.target as HTMLElement;
-      
-      // Check if leaving navbar logo or heading
-      const isLogo = target.tagName === 'IMG' && target.src?.includes('Logo.svg');
-      const isHeading = target.tagName === 'H1' || target.classList.contains('font-dahlia');
-      const isNavbarTab = target.closest('li') && target.closest('ul');
-      
-      // More specific check for navbar tabs
-      const isNavbarLi = target.tagName === 'LI' && target.classList.contains('cursor-pointer');
-      
-      if (isLogo || isHeading || isNavbarTab || isNavbarLi) {
+      if (
+        (e.target as HTMLElement).closest('.navbar-tab') ||
+        (e.target as HTMLElement).closest('.hero-hover-area')
+      ) {
         setIsHovered(false);
       }
     };
-
     document.addEventListener('mouseover', handleMouseOver);
     document.addEventListener('mouseout', handleMouseOut);
-
     return () => {
       document.removeEventListener('mouseover', handleMouseOver);
       document.removeEventListener('mouseout', handleMouseOut);
@@ -52,29 +36,23 @@ export const MouseFollower = () => {
   return (
     <>
       <style jsx global>{`
-        * {
-          cursor: none !important;
-        }
+        /* Removed global cursor: none. Only hide cursor for follower */
       `}</style>
       <motion.div
         className="fixed pointer-events-none z-50 mix-blend-difference"
-        style={{
-          left: x - 6,
-          top: y - 6,
-        }}
         animate={{
-          scale: isHovered ? 8 : 1,
+          x: x - 6,
+          y: y - 6,
+          scale: isHovered ? 10 : 2,
         }}
         transition={{
           type: "spring",
-          stiffness: 200,
-          damping: 30,
-          mass: 0.5,
+          stiffness: 100,
+          damping: 20,
+          mass: 0.2,
         }}
       >
-        <div 
-          className="w-3 h-3 rounded-full bg-white"
-        />
+        <div className="w-3 h-3 rounded-full bg-white" />
       </motion.div>
     </>
   );

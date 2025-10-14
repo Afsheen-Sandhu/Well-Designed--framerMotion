@@ -1,0 +1,4 @@
+- [x] Change SlideTabs from <ul> to <div> and adjust classes
+- [x] Change Tab from <li> to <a>, add href="#", update hover bg to slate-700
+- [x] Add mouse events to Tab for cursor animation
+- [x] Remove mix-blend-difference and adjust hover bg for visibility
