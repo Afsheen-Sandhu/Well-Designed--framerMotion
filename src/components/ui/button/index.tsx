@@ -6,7 +6,7 @@ interface ButtonProps {
   onClick?: () => void;
   type?: "button" | "submit" | "reset";
   icon?: ReactNode;
-  variant?: "primary" | "secondary" | "outline";
+  variant?: "primary" | "secondary" | "outline"|"icon";
   fullWidth?: boolean;
   className?: string;
 }
@@ -26,7 +26,8 @@ export const Button: React.FC<ButtonProps> = ({
   const variants = {
     primary: "bg-white text-black hover:bg-slate-600 hover:text-white",
     secondary: "bg-slate-800 text-white hover:bg-slate-700",
-    outline: "bg-transparent border-2 border-white text-white hover:bg-white hover:text-black"
+    outline: "bg-transparent border-2 border-white text-white hover:bg-white hover:text-black",
+    icon: "text-2xl"
   };
   
   const widthClass = fullWidth ? "w-full" : "";

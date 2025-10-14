@@ -1,6 +1,16 @@
+'use client'
+
+import { useState } from 'react'
 import { Button } from "@/components/ui/button"
+import { EnquiryModal } from './EnquiryModel'
+
 
 export const Hero = () => {
+  const [isModalOpen, setIsModalOpen] = useState(false)
+
+  const openModal = () => setIsModalOpen(true)
+  const closeModal = () => setIsModalOpen(false)
+
   return (
     <div className="hero-hover-area absolute inset-0 flex flex-col items-center justify-center z-10 text-center px-4">
       <h1 className="font-dahlia text-6xl md:text-8xl text-white mb-6 drop-shadow-lg">
@@ -9,10 +19,10 @@ export const Hero = () => {
       <p className="font-manrope font-light text-xl md:text-2xl text-white/90 mb-4 max-w-2xl">
       Transform your hotel or villa into a distinctive brand that captures hearts and minds
       </p>
-      <Button variant="secondary" >
+      <Button variant="secondary" className="mt-6" onClick={openModal}>
         Send Enquiry
       </Button>
-      
+      <EnquiryModal isOpen={isModalOpen} onClose={closeModal} />
     </div>
   )
 }
