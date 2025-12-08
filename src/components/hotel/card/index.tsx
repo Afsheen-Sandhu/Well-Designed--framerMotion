@@ -1,4 +1,5 @@
 import React from "react";
+import Image from "next/image";
 
 // Reusable Card Component
 
@@ -11,16 +12,19 @@ type CardProps = {
 export const HotelCard = ({ logo, title, desc, img }: CardProps) => {
   return (
     <div className="relative rounded-2xl overflow-hidden group shadow-lg hover:scale-[1.03] transition-transform duration-500">
-      <img
+      <Image
         src={img}
         alt="Card background"
+        fill
         className="w-full h-80 object-cover brightness-75 group-hover:brightness-50 transition-all duration-500"
       />
 
       <div className="absolute inset-0 flex items-center justify-center bg-gradient-to-t from-black/50 via-black/30 to-transparent">
-        <img
+        <Image
           src={logo}
           alt="Logo"
+          width={100}
+          height={100}
           className="w-100 h-100 object-contain group-hover:scale-110 transition-transform duration-300"
         />
       </div>

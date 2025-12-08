@@ -2,6 +2,7 @@
 import { useState, useEffect } from "react";
 import { animate } from "framer-motion";
 import { Bell, Menu, X } from "lucide-react";
+import NextImage from "next/image";
 
 const navLinks = [
   { label: "Home", id: "home" },
@@ -84,7 +85,13 @@ export const Navbar = () => {
         {/* Desktop & Tablet Layout (lg and above) */}
         <div className="hidden lg:flex items-center justify-between w-full">
           {/* Logo */}
-          <img src="/Logo.svg" alt="Logo" className="w-40 xl:w-56 h-auto" />
+          <NextImage
+            src="/Logo.svg"
+            alt="Logo"
+            width={160}
+            height={40}
+            className="w-40 xl:w-56 h-auto"
+          />
 
           {/* Nav Links */}
           <ul className="font-manrope flex items-center gap-4 xl:gap-10 bg-neutral-900/80 backdrop-blur-sm rounded-2xl px-8 xl:px-20 py-4 xl:py-8 border border-neutral-700">
@@ -131,7 +138,13 @@ export const Navbar = () => {
         {/* Mobile & Tablet Layout (below lg) */}
         <div className="lg:hidden flex items-center justify-between w-full">
           {/* Logo */}
-          <img src="/Logo.svg" alt="Logo" className="w-32 sm:w-40 h-auto" />
+          <NextImage
+            src="/Logo.svg"
+            alt="Logo"
+            width={128}
+            height={32}
+            className="w-32 sm:w-40 h-auto"
+          />
 
           {/* Mobile Menu Button */}
           <button
