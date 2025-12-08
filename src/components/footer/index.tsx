@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from "react";
+import Image from "next/image";
 import { Button } from "../ui/button";
 
 export const Footer = () => {
@@ -26,10 +27,11 @@ export const Footer = () => {
     >
       {/* Background Image */}
       <div className="absolute inset-10 rounded-xl overflow-hidden ">
-        <img
+        <Image
           className="w-full h-full object-cover opacity-50"
           src="/footer.png"
           alt=""
+          fill
         />
       </div>
 
@@ -39,23 +41,19 @@ export const Footer = () => {
           {/* Contact Information */}
           <div className="w-full md:w-[35%] space-y-6">
             <div>
-              <h2
-                className="text-white text-3xl font-bold mb-2 tracking-tight font-manrope"
-              
-              >
+              <h2 className="text-white text-3xl font-bold mb-2 tracking-tight font-manrope">
                 Contact Us
               </h2>
               <p className="text-gray-300 text-xl leading-relaxed  mt-4">
                 Let us be your creative partners on this journey, helping you
-                create an indelible mark on Greece's hospitality landscape.{" "}
+                create an indelible mark on Greece&apos;s hospitality landscape.{" "}
               </p>
             </div>
             {/* Contact Details */}
-            <h2 className="text-white pt-5 text-3xl font-bold mb-4 tracking-tight font-manrope" >
-                Contact Details
-              </h2>
+            <h2 className="text-white pt-5 text-3xl font-bold mb-4 tracking-tight font-manrope">
+              Contact Details
+            </h2>
             <ul className="space-y-5 text-gray-200 mt-8">
-              
               <li className="flex items-start gap-3">
                 <span className="text-blue-400 text-xl">📧</span>
                 <div>
@@ -99,7 +97,7 @@ export const Footer = () => {
               </h2>
               <p className="text-gray-300 text-xl pr-100 leading-relaxed mt-4">
                 Let us be your creative partners on this journey, helping you
-                create an indelible mark on Greece's hospitality landscape.{" "}
+                create an indelible mark on Greece&apos;s hospitality landscape.{" "}
               </p>
             </div>
 
@@ -143,7 +141,6 @@ export const Footer = () => {
               >
                 Send Message
               </Button>
-               
             </form>
           </div>
         </div>

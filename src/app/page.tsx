@@ -1,6 +1,5 @@
 import { Navbar } from "@/components/homepage/navbar";
 import { Homepage } from "@/components/homepage";
-import { Hero } from "@/components/homepage/hero";
 import { MouseFollower } from "@/components/mouse-follower";
 import { About } from "@/components/about";
 import { Process } from "@/components/process";
